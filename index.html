@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <form>
+            <select id="dropdown">
+                <option value="CPAZ-40" name="redirect">CPAZ-40</option>
+                <option value="CPAZ-50">CPAZ-50</option>
+            </select>
+            <button type="submit" value="redirect">Select</button>
+        </form>
+        <form action="/" method="post">
+            <p>Condenser Fluid Out:</p>
+            <input type="text" name="Condfluidout" placeholder="Enter Condenser Fluid Out"><br>
+            <p>Ambient Temperature:</p>
+            <input type="text" name="Ambienttemp" placeholder="Enter Ambient Temperature"><br>
+            <button type="submit"  value="submit">Calculate</button>
+        </form>
+    {%if total_heat_rejection%}
+    <p>your total heat rejection is {{total_heat_rejection}}</p>
+    {%endif%}
+    </body>
+</html>
